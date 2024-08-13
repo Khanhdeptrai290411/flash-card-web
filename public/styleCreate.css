@@ -1,0 +1,546 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body{
+	font-family: 'Roboto', sans-serif;
+	
+}
+html {
+    scroll-behavior:smooth;
+    overflow-x: hidden;
+	background-color: rgb(243 244 246);
+	
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+	margin-bottom: 0;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--bs-heading-color);
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;	
+}
+i {
+	margin-right: 10px;
+}
+html a{
+	text-decoration:none;
+}
+
+.create {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(243 244 246);
+	
+	}
+
+	.custom-btn {
+		width: 130px;
+		height: 40px;
+		color: #fff;
+		border-radius: 5px;
+		padding: 10px 25px;
+		font-family: 'Lato', sans-serif;
+		font-weight: 500;
+		background: transparent;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		position: relative;
+		display: inline-block;
+		 box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+		 7px 7px 20px 0px rgba(0,0,0,.1),
+		 4px 4px 5px 0px rgba(0,0,0,.1);
+		outline: none;
+	  }
+	
+	/* 3 */
+	.btn-3 {
+	background: rgb(0,172,238) !important;
+	background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%) !important;
+	width: 130px;
+	height: 40px;
+	line-height: 42px;
+	padding: 0;
+	border: none;
+	
+	}
+	.btn-3 p {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+	}
+	.btn-3:before,
+	.btn-3:after {
+	position: absolute;
+	content: "";
+	right: 0;
+	top: 0;
+	background: rgba(2,126,251,1)!important;
+	transition: all 0.3s ease;
+	}
+	.btn-3:before {
+	height: 0%;
+	width: 2px;
+	}
+	.btn-3:after {
+	width: 0%;
+	height: 2px;
+	}
+	.btn-3:hover{
+	background: transparent !important;
+	box-shadow: none;
+	}
+	.btn-3:hover:before {
+	height: 100%;
+	}
+	.btn-3:hover:after {
+	width: 100%;
+	}
+	.btn-3 p:hover{
+	color: rgba(2,126,251,1)!important;
+	}
+	.btn-3 p:before,
+	.btn-3 p:after {
+	position: absolute;
+	content: "";
+	left: 0;
+	bottom: 0;
+	background: rgba(2,126,251,1)!important;
+	transition: all 0.3s ease !important;
+	}
+	.btn-3 p:before {
+	width: 2px;
+	height: 0%;
+	}
+	.btn-3 p:after {
+	width: 0%;
+	height: 2px;
+	}
+	.btn-3 p:hover:before {
+	height: 100%;
+	}
+	.btn-3 p:hover:after {
+	width: 100%;
+	}
+.form-container {
+    /* Add styles as needed for your form container */
+    margin-top: 130px; /* Adjust the value based on your design */
+	margin-bottom: 10px;
+}
+.create .created{
+	display:flex;
+	flex-direction: row;
+	justify-content: space-around;
+	margin-top: 30px;
+	padding:30px;
+	margin-bottom: 0px;
+	width: 140%;
+    background-color: rgb(243 244 246);/* Add your desired background color */
+}
+
+	.create h2{
+		color:#000;
+		} 
+		.item1 { grid-area: header; }
+        .item2 { 
+            grid-area: error; 
+            margin-top: 50px;
+        }
+		.item3 { grid-area: main; }
+		.item4 { grid-area: right; }
+		.item5 { grid-area: footer; }
+		
+		form {
+		  display: grid;
+		  grid-template:
+			'header header header header '
+			' main main right right'
+			' main main footer footer'
+            ' error error error error';
+		  grid-gap: 10px;
+		  background-color: rgb(243 244 246);
+		  padding: 10px;
+		}
+		.inputContainer{
+            background-color: rgb(243 244 246);
+        }
+		form > div {
+			background-color: rgb(243 244 246);
+		  text-align: center;
+		  padding: 8px 0;
+		  font-size: 30px;
+		}
+		.container{
+			width: 90vw;
+		}
+		.container label{
+			color:azure
+		}
+		.container input{
+			background-color: #fff;
+			border:0;
+			height:50px;
+			color:black;
+		}
+		.container textarea{
+			background-color: #fff;
+			border:0;
+			height:140px;
+			color:black;
+		}
+		/* Màu chữ khi input được focus */
+		/* .container input:focus{
+			background-color: rgb(243, 247, 255);
+			border:0;
+			height:50px;
+			color:black; 
+		} */
+		/* .container textarea:focus{
+			background-color: rgb(190, 194, 201);
+			border:0;
+			height:140px;
+			color: black; 
+		} */
+		.container input::placeholder,
+.container textarea::placeholder {
+  color: rgb(0, 0, 0); /* Set the color you desire for the placeholder text */
+  border: 0;
+  text-decoration: bold;
+}
+/* CSS */
+/* Màu chữ khi đã điền */
+ input:-webkit-autofill {
+    -webkit-text-fill-color: rgb(255, 255, 255) !important;
+} 
+
+/* Màu chữ khi hover */
+ input:-webkit-autofill:hover {
+    -webkit-text-fill-color: rgb(255, 255, 255) !important;
+} 
+
+/* Màu chữ khi focus */
+ input:-webkit-autofill:focus {
+    -webkit-text-fill-color: rgb(255, 255, 255) !important;
+} 
+
+/* Màu chữ khi active */
+input:-webkit-autofill:active {
+    -webkit-text-fill-color: rgb(255, 255, 255) !important;
+} 
+
+/* Màu nền khi đã điền */
+ input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px rgb(213, 219, 236) inset !important;
+} 
+
+/* Màu nền khi hover */
+input:-webkit-autofill:hover {
+    -webkit-box-shadow: 0 0 0 30px rgb(205, 211, 228) inset !important;
+} 
+
+/* Màu nền khi focus */
+ input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 30px rgb(176, 178, 189) inset !important;
+} 
+
+/* Màu nền khi active */
+ input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px rgb(158, 160, 168) inset !important;
+} 
+
+
+.tag-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	background-color: rgb(243 244 246);	
+	width: 100%;
+	padding: 15px; 
+	margin-bottom: 20px;
+	border-radius: 15px rgb(89, 87, 100);
+  }
+  
+  .tag-container span {
+	color: rgb(0, 0, 0);
+	font-weight: 600;
+	font-size: 20px;
+  }
+  .tag-container i{
+	color: black;
+	font-weight: 600;
+	font-size: larger;
+  }
+  
+  .tag-container .head_toolbar {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	border-bottom:3px solid #ccc;
+	margin-bottom: 10px;
+	padding:5px;
+  }
+  
+  .tag-container input,
+  .tag-container textarea {
+border-radius: 0%;;
+	margin-bottom: 10px;
+	border: 0;
+	border-bottom: 3px solid white; /* Thêm border-bottom với độ dày 3px và màu trắng */
+	height: 50px;
+	width: 450px;
+	transition:  border-bottom 0.12s cubic-bezier(.47,0,.745,.715); /* Thêm transition để có hiệu ứng chuyển động mượt mà */
+  }
+  
+  
+  .tag-container input::placeholder,
+  .tag-container textarea::placeholder {
+	color: #000000;
+	text-decoration: bold;
+  }
+  /* .tag-container input:focus,
+  .tag-container textarea:focus {
+	background-color: rgb(185, 188, 208);
+	height: 50px;
+	width: 450px;
+	border-bottom: 2px solid #81817f; Thêm border-bottom với độ dày 3px và màu trắng
+	
+  } */
+  
+  /* Optional: Thêm một style cho nút xóa */
+  .tag-container .btn-remove-tag {
+
+	color: #fff; /* Màu chữ nút xóa */
+	border: 0;
+	padding: 5px 10px;
+	cursor: pointer;
+  }
+  .tag-container .inputContainer {
+	display: flex;
+	flex-direction: row; /* Xếp hàng ngang */
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+  }
+  
+  .tag-container .inputContainer input,
+  .tag-container .inputContainer textarea {
+	flex: 1; /* Cho phép input và textarea mở rộng để lấp đầy không gian còn lại */
+	margin-right: 55px; /* Khoảng cách giữa các input */
+  }
+  .album-label {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+  }
+  
+  /* Thêm nét đứt cho đường viền xung quanh hình ảnh album */
+.album-image {
+	width: 100px;
+	height: 100px;
+	object-fit: cover;
+	outline-color: rgb(67, 69, 80) ;
+	border: 2px dashed #ccc; /* Thay đổi màu sắc nếu cần */
+	border-radius: 8px;
+  }
+  
+  /* Hiệu ứng hover khi di chuột vào hình ảnh album */
+
+  
+  
+  #imageInput {
+	display: none; /* Ẩn input file mặc định */
+  }
+  
+  /* Hiển thị icon camera */
+  .album-label i {
+	position: absolute;
+	bottom: 10px;
+	right: 1px;
+	font-size: 5rem;
+	color: #ccc;
+  }
+  
+
+
+  
+	  .btn-group-lg>.btn, .btn-lg {
+
+		margin-top: 10px;
+	}
+	.btn{
+		color:#fff !important;
+	}
+	.btn{
+		color:#fff !important;
+	}
+	.btn-created {
+		font-weight: 600 !important; /* Điều chỉnh kích thước chữ theo mong muốn */
+	  }
+	.UILinkButton {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		background: none;
+		border: none;
+		border-bottom: 0.3125rem solid #3ccfcf;
+		color: rgb(177, 177, 177);
+		cursor: pointer;
+		display: inline-block;
+		font: inherit;
+		max-width: 100%;
+		padding: 0 0 0.75rem;
+		text-align: center;
+		font-weight: 700;
+		text-transform: uppercase;
+		font-size: .9375rem;
+		letter-spacing: .075rem;
+		line-height: 1.2;
+		transition: all .12s cubic-bezier(.47,0,.745,.715);
+		vertical-align: middle;
+		width: auto;
+	}
+	.UILinkButton:active, .UILinkButton:focus, .UILinkButton:hover {
+		border-bottom-color: #ffcd1f;
+		color: #ffcd1f;
+	}
+	[class^=UI] {
+		-ms-font-feature-settings: "kern","liga","clig","alt";
+		font-feature-settings: "kern","liga","clig","calt","kern",common-ligatures contextual;
+		-webkit-font-kerning: normal;
+		font-kerning: normal;
+		font-variant-ligatures: common-ligatures contextual;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+	.app{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		background-color: #201c2c;
+		margin-top: 100px;
+	}
+	.app .title{
+		font-size: 25px;
+		font-weight: 25px;
+		color: #fff;
+		font-weight: 600px;
+		border-bottom: 1px solid #333;
+		padding-bottom: 30px;
+	}
+	.quiz{
+		padding: 20px 0; 
+	}
+	.quiz h2{
+		font-size: 18px;
+		color: #fff;
+		font-weight: 600px;
+	
+	}
+	.question-btn{
+		background-color: #201c2c;
+		color: #fff;
+		font-weight: 500px;
+		width: 100%;
+		border: 1px solid #222;
+		padding: 10px;
+		margin: 10px 0;
+		text-align: left;
+		border-radius: 4px;
+		cursor: pointer;
+	}
+	.question-btn:hover:not([disabled]):hover:not([disabled]){
+		background-color: #201c2c;
+		color: #fff;
+	
+	}
+	.question-btn:disabled{
+		cursor: no-drop;
+	}
+	#next-btn{
+		background-color: #201c2c;
+		color: #fff;
+		font-weight: 500;
+		width: 150px;
+		border: 0;
+		padding: 10px;
+		margin: 20px auto 0;
+		border-radius: 4px;
+		cursor: pointer;
+		display: block;
+	}
+	.correct{
+		background: #9aeabc;
+	
+	}
+	.incorrect{
+		background: #ff9393;
+	}
+
+@media(min-width: 992px){
+	.navbar-expand-custom {
+	    -ms-flex-flow: row nowrap;
+	    flex-flow: row nowrap;
+	    -ms-flex-pack: start;
+	    justify-content: flex-start;
+	}
+	.navbar-expand-custom .navbar-nav {
+	    -ms-flex-direction: row;
+	    flex-direction: row;
+	}
+	.navbar-expand-custom .navbar-toggler {
+	    display: none;
+	}
+	.navbar-expand-custom .navbar-collapse {
+	    display: -ms-flexbox!important;
+	    display: flex!important;
+	    -ms-flex-preferred-size: auto;
+	    flex-basis: auto;
+	}
+}
+
+
+@media (max-width: 991px){
+	#navbarSupportedContent ul li a{
+		padding: 12px 30px;
+	}
+	.hori-selector{
+		margin-top: 0px;
+		margin-left: 10px;
+		border-radius: 0;
+		border-top-left-radius: 25px;
+		border-bottom-left-radius: 25px;
+	}
+	.hori-selector .left,
+	.hori-selector .right{
+		right: 10px;
+	}
+	.hori-selector .left{
+		top: -25px;
+		left: auto;
+	}
+	.hori-selector .right{
+		bottom: -25px;
+	}
+	.hori-selector .left:before{
+		left: -25px;
+		top: -25px;
+	}
+	.hori-selector .right:before{
+		bottom: -25px;
+		left: -25px;
+	}
+}

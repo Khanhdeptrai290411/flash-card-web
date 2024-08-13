@@ -1,0 +1,20 @@
+      // Check if image is present in the request
+                // if (is_array($quizData) && isset($quizData['imageInput']) && is_array($quizData['imageInput'])) {
+                //     $imageInput = $quizData['imageInput'];
+                
+                //     // Kiểm tra xem có file hình ảnh được tải lên hay không
+                //     if (isset($imageInput['imageInput']) && is_a($imageInput['imageInput'], 'Illuminate\Http\UploadedFile')) {
+                //         // Xóa ảnh cũ và lưu ảnh mới
+                //         if ($imageInput['imageInput']->isValid()) {
+                //             $this->deleteOldImage($quizId->image);
+                //             $quizId->image = $this->uploadImage($imageInput['imageInput']);
+                //         }
+                //     }
+                // }
+                // if (is_array($quizData) && isset($quizData['imageInput']) && $quizData['imageInput'] instanceof UploadedFile && $quizData['imageInput']->isValid()) {
+                //     // Delete old image
+                //     $this->deleteOldImage($quizId->image);
+                
+                //     // Save the new image and get the file path
+                //     $quizUpdateData['image'] = $this->uploadImage($quizData['imageInput']);
+                // }

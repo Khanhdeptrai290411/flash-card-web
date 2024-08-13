@@ -1,0 +1,576 @@
+* {
+  box-sizing: border-box;
+}
+:root{
+  --border-radius: 2rem !important;
+  --card-border-radius: 1rem !important;
+  --btn-padding: 0.6rem 2rem !important;
+  --search-padding: 0.6rem 1rem !important;
+  --card-padding: 1rem !important;
+  --color-white: hsl(252, 30%, 100%) !important;
+  --color-gray: hsl(252, 15%, 65%) !important;
+  --color-light:hsl(252, 30%, 90%) !important;
+  --color-dark: hsl(255, 27%, 26%) !important;
+  --color-primary: crimson !important;
+  --color-success: hsl(120, 95%, 60%)!important;
+  --color-danger: hsl(0, 95%, 65%)!important;
+  --color-black: hsl(252, 30%, 10%)!important;
+  --bg-dark: #212529!important;
+  --sticky-top-left: 5.4rem!important;
+  --sticky-top-right: -18rem!important;
+  --highlight: crimson!important;
+  }
+  body {
+    font-family: Arial;
+    color: var(--color-dark);
+    background: var(--color-light);
+    overflow-x: hidden;
+    
+  }
+
+
+ 
+  .theme-switch {
+    --background: #FFF;
+    --text: #333;
+    color: var(--text);
+    width: 70px;
+    height: 30px;
+    background: var(--highlight);
+    border-radius: 50px;
+    position: relative;
+  }
+  .theme-switch .switch {
+    background: white;
+    width: 24px;
+    height: 24px;
+    background: var(--background);
+    border-radius: 100%;
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    transition: 0.5s all ease;
+  }
+  
+  .light-theme {
+    --text: #fff  !important;
+    background: var(--color-dark)  !important;
+    color:var(--text)  !important; 
+  }
+  .light-theme2{
+      --text: #fff  !important;
+      background-color: var(--color-black) !important;
+      color:var(--text)  !important;
+    
+  }
+  .light-theme .theme-switch {
+    background: var(--color-dark);
+  }
+  .light-theme .theme-switch .switch {
+    transform: translateX(37px);
+  }
+  .light-theme a {
+    color: var(--text);
+  }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+
+    }
+    button {
+      margin: 20px;
+    }
+    .custom-btn {
+      width: 130px;
+      height: 40px;
+      color: #fff;
+      border-radius: 5px;
+      padding: 10px 25px;
+      font-family: 'Lato', sans-serif;
+      font-weight: 500;
+      background: transparent;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      display: inline-block;
+       box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+       7px 7px 20px 0px rgba(0,0,0,.1),
+       4px 4px 5px 0px rgba(0,0,0,.1);
+      outline: none;
+    }
+  
+  /* 3 */
+.btn-3 {
+background: rgb(0,172,238) !important;
+background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%) !important;
+width: 130px;
+height: 40px;
+line-height: 42px;
+padding: 0;
+border: none;
+
+}
+.btn-3 p{
+position: relative;
+display: block;
+width: 100%;
+height: 100%;
+}
+.btn-3:before,
+.btn-3:after {
+position: absolute;
+content: "";
+right: 0;
+top: 0;
+ background: rgba(2,126,251,1)!important;
+transition: all 0.3s ease;
+}
+.btn-3:before {
+height: 0%;
+width: 2px;
+}
+.btn-3:after {
+width: 0%;
+height: 2px;
+}
+.btn-3:hover{
+ background: transparent !important;
+box-shadow: none;
+}
+.btn-3:hover:before {
+height: 100%;
+}
+.btn-3:hover:after {
+width: 100%;
+}
+.btn-3 p:hover{
+ color: rgba(2,126,251,1)!important;
+}
+.btn-3 p:before,
+.btn-3 p:after {
+position: absolute;
+content: "";
+left: 0;
+bottom: 0;
+ background: rgba(2,126,251,1)!important;
+transition: all 0.3s ease !important;
+}
+.btn-3 p:before {
+width: 2px;
+height: 0%;
+}
+.btn-3 p:after {
+width: 0%;
+height: 2px;
+}
+.btn-3 p:hover:before {
+height: 100%;
+}
+.btn-3 p:hover:after {
+width: 100%;
+}
+/* custom scroll bar */
+::-webkit-scrollbar {
+width: 10px;
+height: 10px;
+}
+
+::-webkit-scrollbar-track {
+background: #f1f1f1;
+} 
+::-webkit-scrollbar-thumb {
+background-color: rgba(2,126,251,1);
+}
+
+
+  
+  /* Style the top navigation bar */
+  /* .topnav {
+    overflow: hidden;
+    background-color: #333;
+  } */
+  
+  /* Style the topnav links */
+  /* .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  } */
+  
+  /* Change color on hover */
+  /* .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  } */
+  
+  /* Create two unequal columns that floats next to each other */
+  /* Left column */
+  .leftcolumn {   
+    float: left;
+    width: 100% !important;
+    padding-top: 4rem;
+  }
+  
+  /* Right column */
+  .rightcolumn {
+    float: left;
+    width: 25%;
+    background-color: #ffffff !important;
+    padding-left: 20px;
+    padding-top: 4rem;
+  }
+  
+  /* Fake image */
+  .fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  /* Add a card effect for articles */
+  .card {
+    background-color: white;
+    padding: 40px !important;
+    margin-top: 20px;
+  }
+  
+  /* Clear floats after the columns */
+  .row::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+
+  
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+      width: 100%;
+      padding: 0;
+    }
+  }
+  
+  /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+  @media screen and (max-width: 400px) {
+    .topnav a {
+      float: none;
+      width: 100%;
+    }
+  }
+  /* tạo menu bênh */
+  .sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+/* scorrol */
+div.scrollmenu {
+    display: flex; /* Sử dụng flexbox để các thẻ div con nằm trong một hàng ngang */
+    overflow-x: auto; /* Cho phép cuộn ngang khi nội dung vượt quá kích thước của menu */
+    background-color: #f1f1f1;
+    border-radius: 15px;
+    border:1px solid #f1f1f1 ;
+  }
+  
+  div.scrollmenu .card {
+    flex: 0 0 auto; /* Chỉnh kích thước của thẻ div con trong menu */
+    margin-right: 10px; /* Khoảng cách giữa các thẻ div */
+    margin-left: 10px;
+  }
+
+
+
+
+
+/* Style the top navigation bar */
+/* .topnav {
+  overflow: hidden;
+  background-color: #333;
+} */
+
+/* Style the topnav links */
+/* .topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+} */
+
+/* Change color on hover */
+/* .topnav a:hover {
+  background-color: #ddd;
+  color: black;
+} */
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* lịch */
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+/* lịch */
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+
+.site-footer
+{
+background-color:#ffffff;
+padding:45px 0 20px;
+font-size:15px;
+line-height:24px;
+color:#000000;
+}
+.site-footer.container
+{
+border-top: 1px solid #000000;
+}
+.site-footer hr
+{
+border-top-color:#bbb;
+opacity:0.5
+}
+.site-footer hr.small
+{
+margin:20px 0
+}
+.site-footer h6
+{
+color:#000000;
+font-size:16px;
+text-transform:uppercase;
+margin-top:5px;
+letter-spacing:2px
+}
+.site-footer a
+{
+color:#ffffff;
+}
+.site-footer a:hover
+{
+color:#3366cc;
+text-decoration:none;
+}
+.footer-links
+{
+padding-left:0;
+list-style:none
+}
+.footer-links li
+{
+display:block
+}
+.footer-links a
+{
+color:#000000 !important;
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+color:#3366cc;
+text-decoration:none;
+}
+.footer-links.inline li
+{
+display:inline-block
+}
+.site-footer .social-icons
+{
+text-align:right
+}
+.site-footer .social-icons a
+{
+width:40px;
+height:40px;
+line-height:40px;
+margin-left:6px;
+margin-right:0;
+border-radius:100%;
+background-color:#ffffff
+}
+.copyright-text
+{
+margin:0
+}
+@media (max-width:991px)
+{
+.site-footer [class^=col-]
+{
+  margin-bottom:30px
+}
+}
+@media (max-width:767px)
+{
+.site-footer
+{
+  padding-bottom:0
+}
+.site-footer .copyright-text,.site-footer .social-icons
+{
+  text-align:center
+}
+}
+.social-icons
+{
+padding-left:0;
+margin-bottom:0;
+list-style:none
+}
+.social-icons li
+{
+display:inline-block;
+margin-bottom:4px
+}
+.social-icons li.title
+{
+margin-right:15px;
+text-transform:uppercase;
+color:#000000;
+font-weight:700;
+font-size:13px
+}
+.social-icons a{
+background-color:#000000;
+color:#000000;
+font-size:16px;
+display:inline-block;
+line-height:44px;
+width:44px;
+height:44px;
+text-align:center;
+margin-right:8px;
+border-radius:100%;
+-webkit-transition:all .2s linear;
+-o-transition:all .2s linear;
+transition:all .2s linear
+}
+.social-icons a:active,.social-icons a:focus,.social-icons a:hover
+{
+color:#000000;
+background-color:#29aafe
+}
+.social-icons.size-sm a
+{
+line-height:34px;
+height:34px;
+width:34px;
+font-size:14px
+}
+.social-icons a.facebook:hover
+{
+background-color:#3b5998
+}
+.social-icons a.twitter:hover
+{
+background-color:#00aced
+}
+.social-icons a.linkedin:hover
+{
+background-color:#007bb6
+}
+.social-icons a.dribbble:hover
+{
+background-color:#ea4c89
+}
+@media (max-width:767px)
+{
+.social-icons li.title
+{
+  display:block;
+  margin-right:0;
+  font-weight:600
+}
+}
